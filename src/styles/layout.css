@@ -1,0 +1,136 @@
+/* ---- Ghost header ---- */
+.ghost-header {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  font-size: 1.2rem;
+  opacity: 0.4;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ---- Stage ---- */
+.stage {
+  position: relative;
+  width: 100vw;
+  min-height: 200vh;
+}
+
+
+/*--- Navigation micro ----*/
+.micro-nav {
+  position: fixed;
+  top: 2.4rem;
+  right: 2.4rem;
+  display: flex;
+  gap: 1.6rem;
+  font-size: 1.4rem;
+  z-index: 10;
+}
+
+.micro-nav a {
+  text-decoration: none;
+  color: #111;
+  opacity: 0.6;
+}
+
+.micro-nav a:hover {
+  opacity: 1;
+}
+
+/* ---- Intro ---- */
+.intro-piece {
+  padding: 18vh 6vw 25vh;
+  max-width: 900px;
+}
+
+.intro-title {
+  font-size: clamp(2rem, 2.5vw, 2.6rem);
+  margin-bottom: 2rem;
+}
+
+.intro-text {
+  font-size: 1.6rem;
+  max-width: 520px;
+}
+
+.intro-sub {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+/* ---- Project pieces ---- */
+.piece {
+  position: relative;
+  margin-bottom: 35vh;
+}
+
+.title {
+  font-size: clamp(3rem, 6vw, 8rem);
+}
+
+.meta {
+  display: block;
+  margin: 1rem 0 2.5rem;
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+/* ---- Individual offsets (juguete visual) ---- */
+.piece-citi {
+  margin-left: 10vw;
+}
+
+.piece-alien {
+  margin-left: 42vw;
+}
+
+.piece-nebvla {
+  margin-left: 22vw;
+}
+
+.piece-melifloz {
+  margin-left: 35vw;
+}
+
+/* ---- Images ---- */
+.piece-image {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+}
+
+/* ---- Footer ---- */
+.ghost-footer {
+  padding: 25vh 6vw 10vh;
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+.ghost-footer a {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.footer-note {
+  margin-top: 1rem;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .intro-piece {
+    padding: 14vh 6vw 18vh;
+  }
+
+  .piece {
+    margin-left: 0 !important;
+    padding: 0 6vw;
+  }
+
+  .piece-image {
+    max-width: 100%;
+  }
+}

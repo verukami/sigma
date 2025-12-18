@@ -1,0 +1,16 @@
+@keyframes drift {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-14px);
+  }
+}
+
+.drift {
+  animation: drift 6s ease-in-out infinite alternate;
+}
+
+.float {
+  animation: drift 8s ease-in-out infinite alternate;
+}
