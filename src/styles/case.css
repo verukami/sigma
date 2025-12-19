@@ -1,89 +1,137 @@
+/* ===============================
+   CASE BASE
+================================ */
+
 .case {
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 8rem 2rem 10rem;
+  background: #fff;
+  color: #111;
 }
+
+/* -------------------------------
+   Header / Nav
+-------------------------------- */
 
 .case-header {
-  position: fixed;
-  top: 2rem;
-  left: 2rem;
+  position: sticky;
+  top: 0;
+  background: #fff;
   z-index: 10;
+  padding: 2rem 4rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.back-link {
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-weight: 600;
   text-decoration: none;
-  font-size: 1.4rem;
+  color: inherit;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
   opacity: 0.6;
 }
 
-.back-link:hover {
+.nav-link:hover {
   opacity: 1;
 }
 
+/* -------------------------------
+   Hero (Project Header)
+-------------------------------- */
+
 .case-hero {
-  margin-bottom: 8rem;
+  padding: 10rem 4rem 6rem;
+  max-width: 1100px;
 }
 
 .case-title {
-  font-size: clamp(4.8rem, 8vw, 7.2rem);
-  line-height: 0.95;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   margin-bottom: 2rem;
 }
 
 .case-subtitle {
-  font-size: 1.8rem;
-  max-width: 60ch;
-  opacity: 0.75;
-}
-
-.case-section {
-  margin-bottom: 6rem;
-}
-
-.case-section h2 {
-  font-size: 2.4rem;
-  margin-bottom: 1.6rem;
-}
-
-.case-section h3 {
-  font-size: 1.6rem;
-  margin: 3rem 0 1rem;
+  font-size: 1.4rem;
+  max-width: 600px;
   opacity: 0.7;
 }
 
-.case-section p,
-.case-section li {
-  font-size: 1.6rem;
-  line-height: 1.7;
-  max-width: 65ch;
+/* -------------------------------
+   Sections
+-------------------------------- */
+
+.case-section {
+  display: grid;
+  grid-template-columns: minmax(320px, 720px) 1fr;
+  gap: 6rem;
+  padding: 6rem clamp(2rem, 6vw, 8rem);
+  max-width: 1400px;
 }
 
-.case-section ul {
-  margin: 1.6rem 0 2.4rem;
-  padding-left: 1.6rem;
+.case-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.meta {
+.case-section h3 {
   font-size: 1.4rem;
-  opacity: 0.6;
+  margin: 3rem 0 1rem;
 }
+
+.case-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* -------------------------------
+   Lists
+-------------------------------- */
+
+.case-list {
+  padding-left: 1.2rem;
+  margin: 2rem 0;
+}
+
+.case-list li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+/* -------------------------------
+   Meta text
+-------------------------------- */
+
+.case-meta {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 2rem;
+}
+
+/* -------------------------------
+   Reflection
+-------------------------------- */
+
+.case-reflection {
+  background: #fafafa;
+}
+
+/* -------------------------------
+   Footer
+-------------------------------- */
 
 .case-footer {
-  text-align: center;
-  padding: 6rem 2rem;
-  font-size: 1.2rem;
-  opacity: 0.5;
-}
-
-/* reveal animation */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+  padding: 4rem;
+  font-size: 0.8rem;
+  opacity: 0.4;
 }
