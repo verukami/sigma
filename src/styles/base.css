@@ -1,69 +1,26 @@
-/* ---- Reset básico ---- */
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
+html {
+  font-size: 62.5%;
 }
-
-/* ---- Variables ---- */
-:root {
-  --bg: #f6f6f6;
-  --text: #0b0a13;
-
-  --pink: #ff3ecf;
-  --blue: #15c7ff;
-  --orange: #ff9877;
-}
-
-/* ---- Base ---- */
-
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.6;
-  overflow-x: hidden;
+  font-size: 1.6rem;
+  color: #111;
+  background: #fafafa;
 }
 
-/* ---- Tipografía ---- */
-h1, h2 {
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-/* ---- Texto con gradiente ---- */
-.gradient-text {
-  background: linear-gradient(
-    90deg,
-    var(--pink),
-    var(--blue),
-    var(--orange)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text.alt {
-  background: linear-gradient(120deg, var(--blue), var(--pink));
-}
-
-.gradient-text.soft {
-  background: linear-gradient(90deg, var(--orange), var(--pink));
-}
-
-/* ---- Links ---- */
 a {
   color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
