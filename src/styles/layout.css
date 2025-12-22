@@ -386,6 +386,7 @@
     gap: 3rem;
     z-index: 1000;
     overscroll-behavior: contain;
+    touch-action: none;
   }
 
   .micro-nav.open .menu-toggle {
