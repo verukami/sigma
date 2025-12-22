@@ -20,16 +20,18 @@
 
   <!-- Minimal header -->
   <header class="ghost-header">
-    <span class="logo"><img
-            src="assets/images/miranda.gif"
-            alt="Citibanamex project preview"
-            class="piece-image drift"
-          /></span>
-
     <nav class="micro-nav">
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="mailto:veru.kami@gmail.com">Contact</a>
+    <span class="logo">
+      <img src="assets/images/miranda.gif" alt="logo"/>
+    </span>
+
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+
+    <a href="mailto:veru.kami@gmail.com">Contact</a>
+    <button class="menu-toggle" aria-label="Open menu">
+       ☰
+    </button>
     </nav>
   </header>
 
@@ -41,12 +43,19 @@
 
       <p class="intro-text">
         Hola! Im Verónica Martínez, a UI/UX designer working across systems, interfaces,
-        and complex digital products.
+        and carefully crafted digital experiences.
       </p>
 
       <p class="intro-sub">
-        México · UX / UI · Design systems · 10+ years
+        México ✦ UX / UI ✦ Design systems ✦ 10+ years
       </p>
+
+      <div class="hero-shapes">
+        <div class="shape slice" data-project="citibanamex"></div>
+        <div class="shape circle" data-project="eaad"></div>
+        <div class="shape orb" data-project="alienpooh"></div>
+        <div class="shape stack" data-project="melifloz"></div>
+      </div>
     </section>
 
     <!-- PROJECTS -->
@@ -54,7 +63,7 @@
 
       <!-- Citi -->
       <article class="piece piece-citi">
-        <a href="projects/citibanamex/index.html" class="piece-link">
+        <a href="../public/projects/citibanamex/index.html" class="piece-link">
           <h2 class="title">Citibanamex</h2>
           <span class="meta">
             Core banking · UX strategy · Design systems
@@ -70,10 +79,10 @@
 
       <!-- EAAD -->
       <article class="piece piece-eaad">
-        <a href="projects/eaad/index.html" class="piece-link">
+        <a href="../public/projects/eaad/index.html" class="piece-link">
           <h2 class="title">EAAD</h2>
           <span class="meta">
-            Branding · Web design
+            UX strategy · Web design
           </span>
 
           <img
@@ -84,12 +93,12 @@
         </a>
       </article>
 
-      <!-- Nebvla -->
-      <article class="piece piece-nebvla">
+      <!-- MElifloz -->
+      <article class="piece piece-melifloz">
         <a href="projects/nebvla/index.html" class="piece-link">
-          <h2 class="title">Nebvla</h2>
+          <h2 class="title">Melifloz</h2>
           <span class="meta">
-            Visual identity · Product design
+            UI strategy · Product design
           </span>
 
           <img
@@ -137,17 +146,30 @@
   <footer class="ghost-footer">
     <div class="footer-marquee-wrapper">
         <div class="footer-marquee-content">
-            <span>© verukami, 2025</span>
-            <span>© verukami, 2025</span>
-            <span>© verukami, 2025</span>
-            <span>© verukami, 2025</span>
-            <span>© verukami, 2025</span>
+            <span>© Verónica, 2026</span>
+            <span>© Verónica, 2026</span>
+            <span>© Verónica, 2026</span>
+            <span>© Verónica, 2026</span>
+            <span>© Verónica, 2026</span>
+
+            <span>© Verónica, 2026</span>
+            <span>© Verónica, 2026</span>
+            <span>© Verónica, 2026</span>
+            <span>© Verónica, 2026</span>
+            <span>© Verónica, 2026</span>
             </div>
     </div>
+
     <div class="socials">
-      <a href="https://www.linkedin.com/in/veromtz" target="_blank">LinkedIn</a>
-      <a href="https://www.behance.net/verukami" target="_blank">Behance</a>
-      <a href="https://www.instagram.com/verukami" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/veromtz" target="_blank" class="footer-link">LinkedIn</a>
+      <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 0L8.38593 5.61407L14 7L8.38593 8.38593L7 14L5.61407 8.38593L0 7L5.61407 5.61407L7 0Z" fill="currentColor"></path>
+</svg>
+      <a href="https://www.behance.net/verukami" target="_blank" class="footer-link">Behance</a>
+      <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 0L8.38593 5.61407L14 7L8.38593 8.38593L7 14L5.61407 8.38593L0 7L5.61407 5.61407L7 0Z" fill="currentColor"></path>
+</svg>
+      <a href="https://www.instagram.com/verukami" target="_blank" class="footer-link">Instagram</a>
     </div>
 
     <p class="footer-note">
@@ -156,6 +178,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="../src/scripts/motion.js"></script>
+  <script src="../public/assets/js/motion.js"></script>
+  <script src="../public/assets/js/menu.js"></script>
 </body>
 </html>
