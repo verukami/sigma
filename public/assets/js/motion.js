@@ -1,49 +1,56 @@
-const shapes = document.querySelectorAll(".shape");
-const projects = document.querySelectorAll(".piece");
+gsap.registerPlugin(ScrollTrigger);
 
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
+document.querySelectorAll(".shape").forEach(shape => {
+  const targetClass = shape.dataset.target;
+  const target = document.querySelector(`.${targetClass}`);
+  if (!target) return;
 
-  shapes.forEach((shape, i) => {
-    const target = projects[i];
-    if (!target) return;
-
-    const rect = target.getBoundingClientRect();
-    const offset = rect.top + scrollY - window.innerHeight / 2;
-
-    shape.style.transform = `
-      translateY(${Math.min(scrollY * 0.3, offset)}px)
-      rotate(${scrollY * 0.05}deg)
-    `;
+  ScrollTrigger.create({
+    trigger: target,
+    start: "top center",
+    end: "center center",
+    scrub: true,
+    onUpdate: self => {
+      gsap.to(shape, {
+        y: self.progress * 120,
+        ease: "none"
+      });
+    }
   });
 });
 
-const toggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".micro-nav");
 
-toggle.addEventListener("click", () => {
-  nav.classList.toggle("open");
-  
-  toggle.textContent = nav.classList.contains("open") ? "✕" : "☰";
+/* =========================
+   SHAPES → FLOATING MOTION
+========================= */
 
-  document.body.style.overflow = nav.classList.contains("open")
-    ? "hidden"
-    : "";
+gsap.to(".shape", {
+  y: "+=24",
+  rotation: 8,
+  duration: 5,
+  ease: "sine.inOut",
+  repeat: -1,
+  yoyo: true,
+  stagger: 0.4
 });
 
-toggle.addEventListener("click", () => {
-  nav.classList.toggle("open");
-  toggle.textContent = nav.classList.contains("open") ? "✕" : "☰";
-});
+/* =========================
+   MOBILE MENU
+========================= */
 
-const shapes = document.querySelectorAll(".shape");
+(() => {
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".micro-nav");
+  let menuOpen = false;
 
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
+  if (!toggle || !nav) return;
 
-  shapes.forEach((shape, i) => {
-    const speed = 0.15 + i * 0.05;
-    shape.style.transform = `translateY(${scrollY * speed}px)`;
+  toggle.addEventListener("click", () => {
+    menuOpen = !menuOpen;
+
+    nav.classList.toggle("open", menuOpen);
+    toggle.textContent = menuOpen ? "✕" : "☰";
+
+    document.body.style.overflow = menuOpen ? "hidden" : "";
   });
-});
-
+})();
