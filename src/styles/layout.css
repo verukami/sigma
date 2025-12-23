@@ -96,7 +96,7 @@
   pointer-events: none;
   width: clamp(60px, 8vw, 140px);
   aspect-ratio: 1;
-  z-index: 9999;
+  z-index: 1;
   opacity: 0.8;
 }
 
@@ -125,7 +125,7 @@
 
 /* Citibanamex Slice */
 .slice {
-  top: clamp(15vh, 10vh, 15vh);
+  top: clamp(20vh, 10vh, 15vh);
   left: clamp(2vw, 5vw, 25vw);
   
   background: #fb108e;
@@ -138,7 +138,7 @@
 /* EAAD */
 .circle {
   top: clamp(40vh, 5vh, 15vh);
-  left: clamp(15vw, 15vw, 25vw);
+  left: clamp(20vw, 15vw, 25vw);
   width: 200px; /* adjust to control the size */
   aspect-ratio: 1;
   /* ¡CAMBIO CLAVE AQUÍ! Rellenamos la forma con un color sólido */
@@ -179,6 +179,84 @@
   50% { transform: translateY(-14px) rotate(4deg); }
   100% { transform: translateY(0) rotate(0deg); }
 }
+
+/* -------------------------
+   Gallery
+-------------------------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  padding: 4rem;
+}
+
+.project-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: visible;
+  border-radius: 20px;
+}
+
+.project-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.6s ease;
+}
+
+/* overlay */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.20);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-overlay h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.project-overlay p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* hover magic */
+.project-link:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-link:hover .project-overlay {
+  opacity: 1;
+}
+
 
 /* -------------------------
    Responsive
@@ -245,6 +323,7 @@
   color: whitesmoke;
   overflow: hidden;
   box-sizing: border-box;
+  background-color: #000;
 
   display:flex;
   flex-direction: column;
@@ -415,6 +494,17 @@
     top: 2rem;
     left: 2rem;
     transform: none; 
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2rem;
+  }
+
+  .project-card {
+    aspect-ratio: 4/5;
+    position: relative;
   }
 
   .projects-stage {

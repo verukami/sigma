@@ -54,3 +54,10 @@ gsap.to(".shape", {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   });
 })();
+
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('touchstart', () => {
+    card.classList.toggle('is-active');
+  });
+});
+
