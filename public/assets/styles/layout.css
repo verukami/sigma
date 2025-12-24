@@ -152,8 +152,8 @@
 
 /* Alienpooh */
 .orb {
-  top: clamp(10vh, 25vh, 40vh);
-  left: clamp(5vw, 60vw, 120vw);
+  top: clamp(10vh, 25vh, 20vh);
+  left: clamp(5vw, 60vw, 80vw);
   background: #74ff02;
   width: 200px; /* adjust to control the size */
   aspect-ratio: 1;
