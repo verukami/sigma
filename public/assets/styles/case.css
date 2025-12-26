@@ -34,13 +34,14 @@ body.is-light {
   justify-content: space-between;
   align-items: center;
   background: #f8f9f9;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(100px);
   z-index: 20;
   opacity: .9;
 }
 
 .back-link {
-  font-size: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
   text-decoration: none;
   color: #1a1a1a;
   opacity: 0.7;
@@ -59,7 +60,7 @@ body.is-light {
 /* Base layout */
 .project {
   background: inherit;
-  color: inherit
+  color: inherit;
   font-family: system-ui, sans-serif;
 }
 
@@ -80,7 +81,8 @@ body.is-light {
 .project-title {
   font-size: clamp(3rem, 6vw, 4.5rem);
   margin: 1rem 0;
-  color: inherit
+  color: var(--accent-pink);
+  font-weight: 700;
 }
 
 .project-subtitle {
@@ -174,22 +176,26 @@ body.is-light {
   .project-hero {
     padding-top: 8rem;
   }
+
+    .footer-link {
+    font-size: 1rem;
+  }
 }
 
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 0rem;
   margin-top: 2rem;
 }
 
 /* base */
 .tag {
-  font-size: 0.60rem;
+  font-size: 0.80rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  padding: 0.45rem 0.75rem;
+  padding: 1rem 1rem;
   line-height: 1;
   border: 1px solid transparent;
 }
@@ -197,15 +203,15 @@ body.is-light {
 /* shapes */
 .project-tags {
   display: flex;
-  gap: 1rem;
+  gap: 0.2rem;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .tag {
   font-size: 0.75rem;
-  padding: 0.5rem 0.9rem;
-  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  font-weight: 700;
   transition: 
     background-color 0.4s ease,
     transform 0.4s ease,
@@ -218,11 +224,11 @@ body.is-light {
 }
 
 .tag.rect {
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 .tag.hybrid {
-  border-radius: 999px 4px 4px 999px;
+  border-radius: 999px 2px 2px 999px;
 }
 
 /* colors */
@@ -247,80 +253,92 @@ body.is-light {
 }
 
 
-.project-footer {
-  padding: 6rem 2rem 4rem;
-  text-align: center;
-  border-top: 1px solid rgba(0,0,0,0.08);
+/*-------------------------------
+   Footer */
+   :root {
+    --color-bg-dark: #1a1a1a;
+    --color-pink: #fb108e;
+    --color-blue: #00ffee;
+   }
+
+.ghost-footer {
+  width: 100%;
+  background-color: var(--color-bg-dark);
+  padding: 80px 0 60px;
+  color: whitesmoke;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #000;
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.footer-meta {
-  margin-bottom: 2rem;
+.footer-marquee-wrapper {
+  width: 100%;
+  height: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
 }
 
-.footer-name {
-  font-size: 0.9rem;
+.footer-marquee-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 120px;
+  animation: marquee 40s linear infinite;
+}
+
+.footer-marquee-content span {
+  font-size: 40px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translatex(0);
+  }
+  to {
+    transform: translatex(-50%);
+}}
+
+.socials {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 8px 40px;
+  width: 100%;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0 28px;
+  transition: color 0.3 ease;
   font-weight: 500;
 }
 
-.footer-role {
-  font-size: 0.8rem;
+.footer-link:hover {
+    /* Al pasar el mouse, usa el gradiente para un efecto más 'pop' */
+    color: var(--color-pink); 
+    background: linear-gradient(45deg, var(--color-pink), var(--color-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-note{
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  margin: 0;
   opacity: 0.6;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.footer-links a {
-  font-size: 0.85rem;
-  text-decoration: none;
-  color: #1a1a1a;
-  opacity: 0.6;
-  position: relative;
-}
-
-.footer-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.3;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.footer-links a:hover {
-  opacity: 1;
-}
-
-.footer-links a:hover::after {
-  transform: scaleX(1);
-}
-
-.footer-note {
-  font-size: 0.75rem;
-  opacity: 0.4;
+  padding-bottom: 20px;
 }
 
 
-.project-footer {
-  animation: fadeUp 0.6s ease both;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}

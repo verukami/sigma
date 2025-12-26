@@ -66,31 +66,50 @@ From UX strategy to interface design, I help teams turn complexity into clear, s
     <a href="../public/projects/citibanamex/index.html" class="project-link">
 
       <img
-        src="../public/assets/images/image.png"
+        src="../public/assets/images/bank-hero.png"
         alt="citibanamex project"
         class="project-image"
       />
 
       <div class="project-overlay">
         <h2>Citibanamex</h2>
-        <p>UI strategy · Product design</p>
+        <p>UI strategy · Design System</p>
       </div>
 
     </a>
   </article>
 
+  <!-- eaad-access.html -->
+<div class="password-gate">
+  <p>This project is password protected.</p>
+  <input type="password" id="password" placeholder="Password" />
+  <button id="enter">Enter</button>
+  <p id="error" style="display:none;">Wrong password</p>
+</div>
+
+<script>
+  document.getElementById("enter").addEventListener("click", () => {
+    const pwd = document.getElementById("password").value;
+    if (pwd === "eaad2026") {
+      window.location.href = "index.html";
+    } else {
+      document.getElementById("error").style.display = "block";
+    }
+  });
+</script>
+
   <article class="project-card">
     <a href="../public/projects/eaad/index.html" class="project-link">
 
       <img
-        src="../public/assets/images/melifloz.png"
+        src="../public/assets/images/eaad-hero.png"
         alt="eaad project"
         class="project-image"
       />
 
       <div class="project-overlay">
         <h2>EAAD</h2>
-        <p>Brand · UI/UX · Art direction</p>
+        <p>UI/UX · UI Kit</p>
       </div>
 
     </a>
@@ -100,14 +119,14 @@ From UX strategy to interface design, I help teams turn complexity into clear, s
     <a href="../public/projects/alienpooh/index.html" class="project-link">
 
       <img
-        src="../public/assets/images/image.png"
+        src="../public/assets/images/alien-hero.png"
         alt="Alienpooh project"
         class="project-image"
       />
 
       <div class="project-overlay">
         <h2>Alienpooh</h2>
-        <p>Brand · UI/UX · Art direction</p>
+        <p>Product design · Art direction</p>
       </div>
 
     </a>
@@ -117,14 +136,14 @@ From UX strategy to interface design, I help teams turn complexity into clear, s
     <a href="../public/projects/melifloz/index.html" class="project-link">
 
       <img
-        src="../public/assets/images/melifloz.png"
+        src="../public/assets/images/melifloz-hero.png"
         alt="Melifloz project"
         class="project-image"
       />
 
       <div class="project-overlay">
         <h2>Melifloz</h2>
-        <p>Brand · UI/UX · Art direction</p>
+        <p>UI strategy · Art direction</p>
       </div>
 
     </a>
@@ -175,10 +194,15 @@ From UX strategy to interface design, I help teams turn complexity into clear, s
 <path d="M7 0L8.38593 5.61407L14 7L8.38593 8.38593L7 14L5.61407 8.38593L0 7L5.61407 5.61407L7 0Z" fill="currentColor"></path>
 </svg>
       <a href="https://www.instagram.com/verukami" target="_blank" class="footer-link">Instagram</a>
+      <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 0L8.38593 5.61407L14 7L8.38593 8.38593L7 14L5.61407 8.38593L0 7L5.61407 5.61407L7 0Z" fill="currentColor"></path>
+</svg>
+<a href="https://drive.google.com/file/d/11ctNjCQjosqtgt6yojABmmJl8R4RQbWd/view?usp=sharing" target="_blank" class="footer-link">Resume</a>
     </div>
 
     <p class="footer-note">
-      © Verónica Martínez
+      Let's chat hi at veru.kami@gmail.com<br>
+      Made with ❤
     </p>
   </footer>
 
