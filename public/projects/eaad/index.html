@@ -10,6 +10,27 @@
 </head>
 
 <body class="project">
+
+  <!-- PASSWORD GATE -->
+  <div id="password-gate">
+    <div class="gate-box">
+      <h3>Protected project</h3>
+      <p>This project contains academic work.<br>Enter password to continue.</p>
+
+      <input type="password" id="passwordInput" placeholder="Password">
+      <button onclick="checkPassword()">Enter</button>
+
+      <a href="../../index.html" class="gate-back">
+      ← Return to home
+      </a>
+
+      <div id="error">Wrong password</div>
+    </div>
+  </div>
+
+  
+<div id="protected-content">  
+
 <!-- HEADER -->
 <header class="project-header">
   <a href="../../index.html" class="back-link">← Back</a>
@@ -257,5 +278,7 @@
     <script src="../../assets/js/app.js"></script>
     <script src="../../assets/js/reveal.js"></script>
     <script src="../../assets/js/menu.js"></script>
+    <script src="../../assets/js/eaad-gate.js"></script>
+  </div>  
 </body>
 

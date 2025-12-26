@@ -92,3 +92,16 @@ bgSections.forEach((section, i) => {
     }
   });
 });
+
+document.getElementById("enter").addEventListener("click", () => {
+  const pwd = document.getElementById("password").value;
+
+  if (pwd === "CAMBIAESTO") {
+    document.getElementById("password-gate").style.display = "none";
+    document.getElementById("eaad-project").style.display = "block";
+    document.body.style.overflow = "auto";
+  } else {
+    document.getElementById("error").style.display = "block";
+  }
+});
+
